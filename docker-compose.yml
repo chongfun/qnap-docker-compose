@@ -6,7 +6,7 @@ services:
     environment:
       - PUID=1001
       - PGID=1000
-      - TZ=Australia/Hobart
+      - TZ=America/Los_Angeles
     volumes:
       - /share/Container/nzbget:/config
       - /share/Downloads/NZBGet:/downloads
@@ -20,7 +20,7 @@ services:
     environment:
       - PUID=1001
       - PGID=1000
-      - TZ=Australia/Hobart
+      - TZ=America/Los_Angeles
     volumes:
       - /share/Container/radarr:/config
       - /share/Multimedia/Movies:/movies
@@ -35,7 +35,7 @@ services:
     environment:
       - PUID=1001
       - PGID=1000
-      - TZ=Australia/Hobart
+      - TZ=America/Los_Angeles
     volumes:
       - /share/Container/sonarr:/config
       - /share/Multimedia/TV:/tv
@@ -66,7 +66,7 @@ services:
     container_name: portainer
     command: -H unix:///var/run/docker.sock
     environment:
-      - TZ=Australia/Hobart
+      - TZ=America/Los_Angeles
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /share/Container/portainer:/data
